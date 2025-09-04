@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact</title>
+<link rel="stylesheet" href="contact.css">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Background circles -->
+<div class="background">
+    <div class="circle big"></div>
+    <div class="circle mid"></div>
+    <div class="circle small"></div>
+    <div class="circle big" style="right:-100px;top:-120px;"></div>
+    <div class="circle small" style="right:150px;top:70px;"></div>
+</div>
+
+<!-- Main container -->
+<div class="tab-container">
+
+    <!-- Navigation buttons -->
+    <div class="shortcut-buttons">
+        <a href="index.html" class="btn">Home</a>
+        <a href="profile.html" class="btn">Profile</a>
+        <a href="contact.html" class="btn">Contact</a>
+    </div>
+
+    <!-- Logo and title -->
+    <div class="logo-section">
+        <img src="MUJIW7.jpeg" alt="Logo" class="logo">
+        <h1 class="itim-name">Contact Us</h1>
+    </div>
+
+    <!-- Contact info -->
+    <div class="content-section">
+        <h2>Contact Information</h2>
+        <p>Address: 55/12 M14, Nhongjok city , suwinthawong 55, Bangkok 10530</p>
+        <p>Email: thidaratjantharat09@gmail.com</p>
+        <p>Phone: +66 97-056-xxx</p>
+    </div>
+
+    <!-- Contact form -->
+    <div class="content-section">
+        <h2>Send Us a Message</h2>
+        <form class="contact-form">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Your Name" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="example@email.com" required><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea><br><br>
+
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </div>
+
+</div>
+
+<script src="contact.js"></script>
+</body>
+</html>

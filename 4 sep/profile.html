@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile</title>
+<link rel="stylesheet" href="profile.css">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- วงกลมพื้นหลัง -->
+<div class="background">
+    <div class="circle big" style="top:-100px;left:-100px;"></div>
+    <div class="circle mid" style="top:50px;left:150px;"></div>
+    <div class="circle small" style="top:130px;left:300px;"></div>
+    <div class="circle big" style="top:-120px;right:-100px;"></div>
+    <div class="circle small" style="top:70px;right:150px;"></div>
+</div>
+
+<div class="tab-container">
+
+    <!-- ปุ่มด้านบนในกรอบสีขาว -->
+   <div class="shortcut-buttons">
+    <a href="index.html" class="btn">Home</a>
+    <a href="#about" class="btn">About Me</a>
+    <a href="contact.html" class="btn">Contact</a> <!-- เปลี่ยนจาก #contact เป็น contact.html -->
+</div>
+
+    <!-- โลโก้ / ชื่อ -->
+    <div class="logo-section">
+        <img src="MUJIW7.jpeg" alt="Profile Logo" class="logo">
+        <h1>Profile</h1>
+    </div>
+
+    <!-- รูปประกอบหลัก -->
+    <div class="image-section">
+        <img src="khondee.jpg" alt="Profile Image" class="main-image">
+    </div>
+
+    <!-- เนื้อหา About Me -->
+    <div class="content-section" id="about">
+        <h2>About Me</h2>
+        <p>
+            Name: <span class="itim-name">Thidarat Jantharat</span> | 
+            Nickname: <span class="itim-nickname">Nam</span>
+        </p>
+        <p>
+            Birth: <span class="itim-name">4 September 2007</span><br>
+            Study: <span class="itim-name">Bodindecha 4</span>
+        </p>
+        <p>
+            Everyday: <span class="itim-nickname">I am passionate about learning vocabulary in English. I love exploring new ideas and learning new skills every day.</span>
+        </p>
+        <p>
+            My hobbies: <span class="itim-nickname">Listening to music, exercising, and spending time with friends. I enjoy creating fun projects and sharing them with others.</span>
+        </p>
+
+       <div class="photo-gallery">
+    <div class="photo-card" data-caption="nursery 🏫">
+        <img src="darasamut.jpg" alt="Photo 1" class="photo-thumb">
+        <p class="photo-description">Darasamut school</p>
+    </div>
+    <div class="photo-card" data-caption="kindergarten 1-3 🎨">
+        <img src="narathip.jpg" alt="Photo 2" class="photo-thumb">
+        <p class="photo-description">Narathip pittaya school</p>
+    </div>
+    <div class="photo-card" data-caption="grade1-6 📚">
+        <img src="sarasas.jpg" alt="Photo 3" class="photo-thumb">
+        <p class="photo-description">Sarasas Witaed Minburi School</p>
+    </div>
+    <div class="photo-card" data-caption="matthayom 1-6 🏫">
+        <img src="bodin.jpg" alt="Photo 4" class="photo-thumb">
+        <p class="photo-description">Bodindecha 4</p>
+    </div>
+</div>
+
+<!-- JavaScript สำหรับข้อความเด้ง -->
+<script>
+const cards = document.querySelectorAll('.photo-card');
+
+cards.forEach(card => {
+    card.addEventListener('click', () => {
+        let caption = card.querySelector('.photo-caption');
+        
+        // สร้าง caption ถ้ายังไม่มี
+        if(!caption) {
+            caption = document.createElement('div');
+            caption.className = 'photo-caption';
+            caption.innerText = card.dataset.caption;
+            card.appendChild(caption);
+        }
+
+        // แสดงข้อความ
+        caption.classList.add('show');
+
+        // ซ่อนหลัง 2 วินาที
+        setTimeout(() => {
+            caption.classList.remove('show');
+        }, 2000);
+    });
+});
+</script>
+
+</body>
+</html>
